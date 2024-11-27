@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Built-By: TuNombre
+Created-By: 1.8.0_251 (Oracle Corporation)
+Main-Class: dev.smart.SmartsHead
+Artifact-ID: custom-head-library
+Version: 1.0.0
+Specification-Title: Custom Head Library
+Specification-Version: 1.0.0
+Specification-Vendor: TuNombre
+Implementation-Title: Custom Head Library
+Implementation-Version: 1.0.0
+Implementation-Vendor: TuNombre
