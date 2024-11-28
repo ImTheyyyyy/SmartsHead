@@ -1,6 +1,6 @@
 # SmartsHead Plugin
 
-The **SmartsHead Plugin** provides a utility to generate custom player heads in Minecraft using Base64-encoded textures. It can be integrated as a dependency into other Minecraft plugins.
+The **SmartsHead Library** provides a utility to generate custom player heads in Minecraft using Base64-encoded textures. It can be integrated as a dependency into other Minecraft plugins.
 
 ## Features
 
