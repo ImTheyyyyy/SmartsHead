@@ -1,29 +1,61 @@
 # SmartsHead Plugin
 
-Este plugin proporciona una función para generar cabezas personalizadas en Minecraft utilizando texturas codificadas en Base64. Se puede usar como una dependencia en otros plugins de Minecraft.
+The **SmartsHead Plugin** provides a utility to generate custom player heads in Minecraft using Base64-encoded textures. It can be integrated as a dependency into other Minecraft plugins.
 
-## Funciones
+## Features
 
-- **Generar una cabeza personalizada**: El método `getCustomHead(String base64)` crea un `ItemStack` de tipo `PLAYER_HEAD` con una textura personalizada proporcionada en formato Base64.
+- **Generate custom player heads**: The `getCustomHead(String base64)` method creates an `ItemStack` of type `PLAYER_HEAD` with a custom texture provided in Base64 format.
 
-## Incluirlo como Dependencia
+## How to Use
 
-### Usando Gradle
+### Using Gradle
 
-Para incluir este plugin como dependencia en tu proyecto, simplemente agrega la siguiente configuración en el archivo `build.gradle`:
+To include this plugin as a dependency in your project using **Gradle**, add the following configuration to your `build.gradle` file:
 
 ```gradle
 repositories {
-    mavenCentral()
-    maven {
-        url = 'https://repo.papermc.io/repository/maven-public/'
-    }
-    // Agrega el repositorio de GitHub si lo has publicado ahí
-    maven {
-        url = uri("https://maven.pkg.github.com/your-github-username/your-repository")
-    }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    compileOnly 'dev.smarts:SmartsHead:1.0'
+    implementation 'com.github.ImTheyyyyy:SmartsHead:v1.0.0'
 }
+```
+
+### Using Maven
+
+To include this plugin as a dependency in your project using **Maven**, add the following configuration to your `pom.xml` file:
+
+```maven
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.github.ImTheyyyyy</groupId>
+        <artifactId>SmartsHead</artifactId>
+        <version>v1.0.0</version>
+    </dependency>
+</dependencies>
+```
+
+### Example Usage
+
+Here’s an example of how to use the **getCustomHead** method in your plugin:
+
+```java
+import dev.smart.SmartsHead;
+import org.bukkit.inventory.ItemStack;
+
+public class ExamplePlugin {
+  public ItemStack createCustomHead() {
+    String base64Texture = "your-base64-encoded-texture";
+    return SmartsHead.getCustomHead(base64Texture);
+  }
+}
+```
+
